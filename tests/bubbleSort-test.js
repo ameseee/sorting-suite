@@ -41,7 +41,8 @@ describe('bubble sort', () => {
 
     bubbleSort(newArray);
     assert.equal(newArray[0] <= newArray[1], true);
-    assert.equal(newArray[50] <= newArray[51], true);
+    assert.equal(newArray[Math.floor(newArray.length /2)] <= newArray[Math.floor(newArray.length / 2) + 1], true);
+    assert.equal(newArray[newArray.length - 1] >= newArray[newArray.length - 2], true);
   })
 
 });
