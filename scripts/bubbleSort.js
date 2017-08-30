@@ -12,4 +12,4 @@ const bubbleSort = (array) => {
   return array;
 }
 
-export default bubbleSort
+export default bubbleSort;
