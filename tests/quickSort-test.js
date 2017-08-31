@@ -15,7 +15,7 @@ describe('quickSort', () => {
     assert.deepEqual(quickSort(array), [1, 2, 3, 4, 5])
   });
 
-  it('should sort an array of negative numbers', () => {
+  it('should sort five negative numbers', () => {
     let array = [-3, -5, -1, -2, -4];
 
     assert.deepEqual(array, [-3, -5, -1, -2, -4])
@@ -24,12 +24,6 @@ describe('quickSort', () => {
 
   it('should sort a large array of numbers', () => {
     let array = randomArray(1320, 0, 100);
-
-    assert.equal(quickSort(array)[0] <= quickSort(array)[1], true);
-  });
-
-  it('should sort a large array of negative numbers', () => {
-    let array = randomArray(10, -100, 0);
 
     assert.equal(quickSort(array)[0] <= quickSort(array)[1], true);
   });

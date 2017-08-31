@@ -24,7 +24,7 @@ describe('bubble sort', () => {
     assert.equal(array[0] < array[1], true);
   });
 
-  it('should sort an array of negative numbers', () => {
+  it('should sort five negative numbers', () => {
     let array = [-3, -5, -1, -2, -4];
 
     assert.deepEqual(array, [-3, -5, -1, -2, -4])
@@ -38,12 +38,6 @@ describe('bubble sort', () => {
     assert.equal(newArray[0] <= newArray[1], true);
     assert.equal(newArray[Math.floor(newArray.length /2)] <= newArray[Math.floor(newArray.length / 2) + 1], true);
     assert.equal(newArray[newArray.length - 1] >= newArray[newArray.length - 2], true);
-  });
-  
-  it('should sort a large array of negative numbers', () => {
-    let array = randomArray(10, -100, 0);
-
-    assert.equal(bubbleSort(array)[0] <= bubbleSort(array)[1], true);
   });
 
 });
