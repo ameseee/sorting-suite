@@ -3,7 +3,7 @@ const mergeSort = (arr) => {
       return arr;
     }
 
-    let middle = parseInt(arr.length / 2);
+    let middle = Math.floor(arr.length / 2);
     let left = arr.slice(0, middle);
     let right = arr.slice(middle, arr.length);
 
@@ -21,14 +21,7 @@ const merge = (left, right) => {
         }
     }
 
-    while (left.length) {
-      result.push(left.shift());
-    }
-
-    while (right.length) {
-      result.push(right.shift());
-    }
-
+    result.push(...left, ...right);
     return result;
 }
 
